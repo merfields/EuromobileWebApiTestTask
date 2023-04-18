@@ -58,17 +58,17 @@ public class CoordinatesController : ControllerBase
     // POST api/coordinates
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public ActionResult<TotalDistanceDTO> GetTotalDistanceBetweenCoordinates(CoordinatesDTO[] coordinateDTOs)
+    public ActionResult<TotalDistanceDTO> GetTotalDistanceBetweenCoordinates(CoordinatesDTO[] coordinatesDTOs)
     {
-        if (coordinateDTOs.Length < 2)
+        if (coordinatesDTOs.Length < 2)
         {
             return new TotalDistanceDTO { Meters = 0, Miles = 0 };
         }
 
-        Coordinate[] coordinates = new Coordinate[coordinateDTOs.Length];
-        for (int i = 0; i < coordinateDTOs.Length; i++)
+        Coordinate[] coordinates = new Coordinate[coordinatesDTOs.Length];
+        for (int i = 0; i < coordinatesDTOs.Length; i++)
         {
-            coordinates[i] = MapCoordinateDTOToModel(coordinateDTOs[i]);
+            coordinates[i] = MapCoordinateDTOToModel(coordinatesDTOs[i]);
         }
 
         TotalDistance totalDistance = _coordinatesRepository.CalculateTotalDistanceBetweenCoordinates(coordinates);
