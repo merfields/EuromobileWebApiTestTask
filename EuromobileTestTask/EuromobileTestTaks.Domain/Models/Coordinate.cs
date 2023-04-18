@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EuromobileTestTaks.Domain.Models
-{
-    public class Coordinate
-    {
-        [Range(-90, 90)]
-        public double Latitude { get; set; }
+namespace EuromobileTestTaks.Domain.Models;
 
-        [Range(-180, 180)]
-        public double Longitude { get; set; }
-    }
+public class Coordinate
+{
+    [Range(-90, 90)]
+    public double Latitude { get; set; }
+
+    [Range(-180, 180)]
+    public double Longitude { get; set; }
 }
+

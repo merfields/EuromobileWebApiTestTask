@@ -8,6 +8,11 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<ICoordinatesRepository, CoordinatesRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+});
+
 
 WebApplication app = builder.Build();
 
