@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tIFQXTV3hKnUeBTp8hXvhM5sFm28QgsW7h44N1/khzQ=",
+  "Source": "EuromobileTestTask.WebApi",
+  "BasePath": "_content/EuromobileTestTask.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

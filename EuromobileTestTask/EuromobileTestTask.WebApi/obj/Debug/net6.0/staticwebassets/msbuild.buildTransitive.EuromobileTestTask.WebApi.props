@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\EuromobileTestTask.WebApi.props" />
+</Project>

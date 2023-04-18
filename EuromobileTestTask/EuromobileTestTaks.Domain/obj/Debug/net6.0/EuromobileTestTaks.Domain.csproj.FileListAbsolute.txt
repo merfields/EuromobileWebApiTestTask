@@ -1,0 +1,12 @@
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\bin\Debug\net6.0\EuromobileTestTaks.Domain.deps.json
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\bin\Debug\net6.0\EuromobileTestTaks.Domain.dll
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\bin\Debug\net6.0\EuromobileTestTaks.Domain.pdb
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.csproj.AssemblyReference.cache
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.AssemblyInfoInputs.cache
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.AssemblyInfo.cs
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.csproj.CoreCompileInputs.cache
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.dll
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\refint\EuromobileTestTaks.Domain.dll
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\EuromobileTestTaks.Domain.pdb
+G:\C#Repos\EuromobileWebApiTestTask\EuromobileTestTask\EuromobileTestTaks.Domain\obj\Debug\net6.0\ref\EuromobileTestTaks.Domain.dll

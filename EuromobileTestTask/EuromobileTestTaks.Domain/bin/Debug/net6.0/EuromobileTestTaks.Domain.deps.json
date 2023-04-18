@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EuromobileTestTaks.Domain/1.0.0": {
+        "runtime": {
+          "EuromobileTestTaks.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EuromobileTestTaks.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
