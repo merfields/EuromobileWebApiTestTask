@@ -6,7 +6,7 @@ namespace EuromobileTestTask.WebApi.Repositories;
 public class CoordinatesRepository : ICoordinatesRepository
 {
     //distance = 2r * sin^-1(sqrt(sin^2( (fi2 - fi1)/2 ) + cos(fi1) * cos(fi2) * sin^2( (lamda2 - lambda1)/2 ) )
-    public double CalculateDistanceBetweenTwoCoordinatesInMeters(Coordinate coordinate1, Coordinate coordinate2)
+    public double CalculateDistanceBetweenCoordinatesInMeters(Coordinate coordinate1, Coordinate coordinate2)
     {
         const double EARTH_RADIUS = 6371000d;
 
