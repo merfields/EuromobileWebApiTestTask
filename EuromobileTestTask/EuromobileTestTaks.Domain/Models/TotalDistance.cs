@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EuromobileTestTaks.Domain.Models
 {
-    public class SumDistance
+    public class TotalDistance
     {
-        public double Metres { get; set; }
+        public double Meters { get; set; }
         public double Miles { get; set; }
     }
 }

@@ -19,13 +19,23 @@ namespace EuromobileTestTask.WebApi.Controllers
             _coordinatesRepository = coordinatesRepository;
         }
 
+        /// <summary>
+        /// Generates pairs of random coordinates
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns>Returns an array of coordinates</returns>
+        /// <response code="200">Success</response>
+        /// <response code="400">If user entered a number less than 1</response>
+
         // GET: api/coordinates?count=<int>
         [HttpGet]
-        public ActionResult<List<CoordinatesDTO>> GetRandomCoordinates(int count)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<CoordinatesDTO[]> GetRandomCoordinates(int count)
         {
             if (count < 1)
             {
-                return BadRequest("Number of coordinates should more than 0");
+                return BadRequest("Number of coordinates should be more than 0");
             }
 
             Coordinate[] generatedCoordinates = new Coordinate[count];
@@ -40,14 +50,21 @@ namespace EuromobileTestTask.WebApi.Controllers
             return Ok(coordinatesDTOs);
         }
 
+        /// <summary>
+        /// Calculates the total distance between all coordinates from the array
+        /// </summary>
+        /// <param name="coordinateDTOs"></param>
+        /// <returns>Returns a DTO with total distance between coordinates in meters </returns>
+        /// <response code="200">Success</response>
 
         // POST api/coordinates
         [HttpPost]
-        public ActionResult<SumDistanceDTO> GetSumDistanceBetweenCoordinates(CoordinatesDTO[] coordinateDTOs)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<TotalDistanceDTO> GetTotalDistanceBetweenCoordinates(CoordinatesDTO[] coordinateDTOs)
         {
             if (coordinateDTOs.Length < 2)
             {
-                return new SumDistanceDTO { Metres = 0, Miles = 0 };
+                return new TotalDistanceDTO { Meters = 0, Miles = 0 };
             }
 
             Coordinate[] coordinates = new Coordinate[coordinateDTOs.Length];
@@ -56,15 +73,15 @@ namespace EuromobileTestTask.WebApi.Controllers
                 coordinates[i] = MapCoordinateDTOToModel(coordinateDTOs[i]);
             }
 
-            SumDistance sumDistance = new SumDistance();
+            TotalDistance totalDistance = new TotalDistance();
             for (int i = 0; i < coordinates.Length - 1; i++)
             {
-                sumDistance.Metres += _coordinatesRepository.CalculateDistanceBetweenTwoCoordinatesInMetres(coordinates[i], coordinates[i + 1]);
+                totalDistance.Meters += _coordinatesRepository.CalculateDistanceBetweenTwoCoordinatesInMeteres(coordinates[i], coordinates[i + 1]);
             }
-            sumDistance.Miles = _coordinatesRepository.ConvertMetresToMiles(sumDistance.Metres);
+            totalDistance.Miles = _coordinatesRepository.ConvertMetersToMiles(totalDistance.Meters);
 
-            SumDistanceDTO sumDistanceDTO = MapSumDistanceModelToDTO(sumDistance);
-            return Ok(sumDistanceDTO);
+            TotalDistanceDTO totalDistanceDTO = MapTotalDistanceModelToDTO(totalDistance);
+            return Ok(totalDistanceDTO);
         }
 
 
@@ -76,9 +93,9 @@ namespace EuromobileTestTask.WebApi.Controllers
         {
             return new Coordinate { Latitude = coordinateDTO.Latitude, Longitude = coordinateDTO.Longitude };
         }
-        private SumDistanceDTO MapSumDistanceModelToDTO(SumDistance sumDistance)
+        private TotalDistanceDTO MapTotalDistanceModelToDTO(TotalDistance totalDistance)
         {
-            return new SumDistanceDTO { Metres = sumDistance.Metres, Miles = sumDistance.Miles };
+            return new TotalDistanceDTO { Meters = totalDistance.Meters, Miles = totalDistance.Miles };
         }
     }
 }
