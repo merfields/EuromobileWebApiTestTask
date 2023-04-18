@@ -71,12 +71,7 @@ public class CoordinatesController : ControllerBase
             coordinates[i] = MapCoordinateDTOToModel(coordinateDTOs[i]);
         }
 
-        TotalDistance totalDistance = new TotalDistance();
-        for (int i = 0; i < coordinates.Length - 1; i++)
-        {
-            totalDistance.Meters += _coordinatesRepository.CalculateDistanceBetweenCoordinatesInMeters(coordinates[i], coordinates[i + 1]);
-        }
-        totalDistance.Miles = CoordinatesMathHelper.ConvertMetersToMiles(totalDistance.Meters);
+        TotalDistance totalDistance = _coordinatesRepository.CalculateTotalDistanceBetweenCoordinates(coordinates);
 
         TotalDistanceDTO totalDistanceDTO = MapTotalDistanceModelToDTO(totalDistance);
         return Ok(totalDistanceDTO);
