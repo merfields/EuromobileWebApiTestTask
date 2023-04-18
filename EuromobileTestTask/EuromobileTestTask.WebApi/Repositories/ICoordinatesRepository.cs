@@ -5,7 +5,7 @@ namespace EuromobileTestTask.WebApi.Repositories
     public interface ICoordinatesRepository
     {
         Coordinate GenerateCoordinates();
-        SumDistance CalculateSumDistance(Coordinate[] coordinates);
-        double GetRandomDoubleNumberInRange(double minimum, double maximum);
+        double CalculateDistanceBetweenTwoCoordinatesInMetres(Coordinate coordinate1, Coordinate coordinate2);
+        double ConvertMetresToMiles(double metres);
     }
 }

@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MappingProfiles\" />
-    <Folder Include="DataAccess\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EuromobileTestTaks.Domain\EuromobileTestTaks.Domain.csproj" />
   </ItemGroup>
 
